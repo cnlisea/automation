@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"automation/constant"
-	"automation/utils"
+	"github.com/cnlisea/automation/constant"
+	"github.com/cnlisea/automation/utils"
 )
 
 func AnalysisResponse(data []byte, resStruct map[string]interface{}) (map[string]interface{}, error) {

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"automation/constant"
-	"automation/http"
+	"github.com/cnlisea/automation/constant"
+	"github.com/cnlisea/automation/http"
 )
 
 func ParseConfig(cfg []interface{}) (map[string]map[string]map[string]interface{}, error) {

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	ghttp "net/http"
 
-	"automation/http"
+	"github.com/cnlisea/automation/http"
 
-	"automation/constant"
+	"github.com/cnlisea/automation/constant"
 )
 
 func PrintRequestParams(params map[string]interface{}) string {

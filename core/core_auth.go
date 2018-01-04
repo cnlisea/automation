@@ -1,10 +1,10 @@
 package core
 
 import (
-	"automation/config"
-	"automation/constant"
-	"automation/http"
-	"automation/utils"
+	"github.com/cnlisea/automation/config"
+	"github.com/cnlisea/automation/constant"
+	"github.com/cnlisea/automation/http"
+	"github.com/cnlisea/automation/utils"
 	"errors"
 	"fmt"
 	ghttp "net/http"

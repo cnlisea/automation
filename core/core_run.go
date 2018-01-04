@@ -1,9 +1,9 @@
 package core
 
 import (
-	"automation/constant"
-	"automation/generate"
-	"automation/http"
+	"github.com/cnlisea/automation/constant"
+	"github.com/cnlisea/automation/generate"
+	"github.com/cnlisea/automation/http"
 	"errors"
 	"fmt"
 	ghttp "net/http"

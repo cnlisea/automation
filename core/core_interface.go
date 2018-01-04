@@ -1,7 +1,7 @@
 package core
 
 import (
-	"automation/http"
+	"github.com/cnlisea/automation/http"
 	"encoding/json"
 	gxml "encoding/xml"
 	"errors"
@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"strings"
 
-	"automation/constant"
-	"automation/utils"
+	"github.com/cnlisea/automation/constant"
+	"github.com/cnlisea/automation/utils"
 )
 
 func (i Instance) InterfaceTest(params map[string]interface{}) (map[string]interface{}, map[string]interface{}, error) {

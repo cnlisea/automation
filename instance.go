@@ -1,8 +1,8 @@
 package automation
 
 import (
-	"automation/config"
-	"automation/core"
+	"github.com/cnlisea/automation/config"
+	"github.com/cnlisea/automation/core"
 )
 
 type Instance interface {

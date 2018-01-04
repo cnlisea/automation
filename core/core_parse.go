@@ -1,7 +1,7 @@
 package core
 
 import (
-	"automation/config"
+	"github.com/cnlisea/automation/config"
 )
 
 func (i *Instance) Parse() (err error) {

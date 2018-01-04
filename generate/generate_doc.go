@@ -1,9 +1,9 @@
 package generate
 
 import (
-	"automation/constant"
-	"automation/http"
-	"automation/utils"
+	"github.com/cnlisea/automation/constant"
+	"github.com/cnlisea/automation/http"
+	"github.com/cnlisea/automation/utils"
 	"bytes"
 	"encoding/json"
 	ghttp "net/http"
