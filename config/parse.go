@@ -26,17 +26,18 @@ func ParseConfig(cfg []interface{}) (map[string]map[string]map[string]interface{
 			continue
 		}
 
-		// 接口类型
-		switch apis[0] {
-		case "user":
-		case "banner":
-		case "bizarticle":
-		case "product":
-		case "productprice":
-		case "pricelevel":
-		default:
-			return nil, errors.New(fmt.Sprintln("config [", apis[0], "] bad parameter type"))
-		}
+		/*
+			// 接口类型验证
+			switch apis[0] {
+			case "user":
+			case "banner":
+			case "bizarticle":
+			case "product":
+			case "productprice":
+			case "pricelevel":
+			default:
+				return nil, errors.New(fmt.Sprintln("config [", apis[0], "] bad parameter type"))
+		}*/
 
 		// get request url
 		uri, ok := (cfg[i+1].(map[string]interface{}))["url"].(string)
