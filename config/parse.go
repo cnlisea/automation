@@ -2,7 +2,6 @@ package config
 
 import (
 	"errors"
-	"fmt"
 	"strings"
 
 	"github.com/cnlisea/automation/constant"
