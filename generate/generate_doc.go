@@ -1,11 +1,11 @@
 package generate
 
 import (
+	"bytes"
+	"encoding/json"
 	"github.com/cnlisea/automation/constant"
 	"github.com/cnlisea/automation/http"
 	"github.com/cnlisea/automation/utils"
-	"bytes"
-	"encoding/json"
 	ghttp "net/http"
 	gurl "net/url"
 	"os"

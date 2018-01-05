@@ -1,11 +1,11 @@
 package core
 
 import (
+	"errors"
+	"fmt"
 	"github.com/cnlisea/automation/constant"
 	"github.com/cnlisea/automation/generate"
 	"github.com/cnlisea/automation/http"
-	"errors"
-	"fmt"
 	ghttp "net/http"
 	"sync"
 )

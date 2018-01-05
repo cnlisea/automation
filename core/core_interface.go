@@ -1,11 +1,11 @@
 package core
 
 import (
-	"github.com/cnlisea/automation/http"
 	"encoding/json"
 	gxml "encoding/xml"
 	"errors"
 	"fmt"
+	"github.com/cnlisea/automation/http"
 	ghttp "net/http"
 	"net/url"
 	"strings"
@@ -41,6 +41,12 @@ func (i Instance) InterfaceTest(params map[string]interface{}) (map[string]inter
 	authType := http.NoAuth
 	if t, ok := reqParams[constant.Auth]; ok && !utils.IsDefault(t) {
 		authType = i.AuthType
+	}
+
+	// token
+	token := i.Token
+	if t, ok := reqParams[constant.Token]; ok && 0 < len(utils.ToString(t)) {
+		token = utils.ToString(t)
 	}
 
 	var (
@@ -150,7 +156,7 @@ func (i Instance) InterfaceTest(params map[string]interface{}) (map[string]inter
 		body, bodyType = data, http.HttpBodyTypeXml
 	}
 
-	status, resBody, err := http.HttpRequest(uri, body, bodyType, method, authType, i.Token)
+	status, resBody, err := http.HttpRequest(uri, body, bodyType, method, authType, token)
 	if nil != err {
 		return nil, nil, err
 	}
@@ -162,7 +168,7 @@ func (i Instance) InterfaceTest(params map[string]interface{}) (map[string]inter
 		constant.RequestHttpBody:      body,
 		constant.RequestHttpBodyType:  bodyType,
 		constant.RequestHttpAuthType:  authType,
-		constant.RequestHttpAuthToken: i.Token,
+		constant.RequestHttpAuthToken: token,
 	}
 
 	// 必选的参数
