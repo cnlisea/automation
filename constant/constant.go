@@ -24,6 +24,7 @@ const (
 	Function = "function" // 功能
 	Explain  = "explain"  // 说明，一条或者多条
 	Auth     = "auth"     // 认证
+	Token    = "token"    // 令牌
 )
 
 //
