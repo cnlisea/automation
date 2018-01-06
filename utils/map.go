@@ -20,3 +20,12 @@ func MapMerge(ms ...map[string]interface{}) map[string]interface{} {
 
 	return result
 }
+
+func DeleteMap(data map[string]interface{}, deletes []string) map[string]interface{} {
+	for _, v := range deletes {
+		if _, ok := data[v]; ok {
+			delete(data, v)
+		}
+	}
+	return data
+}
