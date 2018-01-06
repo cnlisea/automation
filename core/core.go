@@ -12,13 +12,8 @@ type Instance struct {
 }
 
 func NewInstance(cfg []interface{}) *Instance {
-	i := new(Instance)
-	if nil == cfg {
-		i.config = config.GlobalConfig
-	} else {
-		i.config = cfg
+	return &Instance{
+		config:   cfg,
+		AuthType: config.AuthType,
 	}
-
-	i.AuthType = config.AuthType
-	return i
 }
